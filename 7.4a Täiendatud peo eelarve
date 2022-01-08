@@ -1,0 +1,32 @@
+fail = str(input("Sisesta failinimi: "))
+fail2 = open(fail, encoding="UTF-8")
+plussiga = 0
+küssaga = 0
+for rida in fail2:
+    if "+" in rida:
+        plussiga += 1
+    else:
+        küssaga += 1
+
+
+kogus = ("Kutsutud on " + str(küssaga+plussiga) + " inimest")
+kogus2 = (str(plussiga) + " inimest tuleb")
+print(kogus)
+print(kogus2)
+
+
+arvu = plussiga * 10 + 55
+arvu2 = küssaga * 10 + 55
+maxu = küssaga + plussiga
+def eelarve(sisend):
+    return sisend * 10 + 55
+#5 inimest tulevad
+# 8 on kutsutud
+
+print("Maksimaalne eelarve: " + str(round(eelarve(maxu))) + " eurot")
+print("Minimaalne eelarve: " + str(round(eelarve(plussiga))) + " eurot")
+
+
+
+
+
