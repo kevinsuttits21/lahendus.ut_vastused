@@ -1,0 +1,21 @@
+küsimus = str(input("Palun sisestage failinimi: "))
+if not ('küsimus' + '.txt'):
+    print("Vale fail või vale faili tüüp")
+
+fail = open(küsimus, encoding="UTF-8")
+laulud = []
+rida = 0
+rea = 0
+lugu = 0
+järk = 1
+for rida in fail:
+    laulud.append(str(rida))
+fail.close()
+
+   
+for laul in laulud:
+    print(str(järk) + ". " + laul.strip())
+    järk += 1
+
+küs2 = int(input("Valige laulu järjekorranumber: "))
+print("Mängitav muusikapala on " + laulud[ küs2 - 1 ])
