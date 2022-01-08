@@ -1,0 +1,12 @@
+küsimus = str(input("Sisesta kuupäev kujul pp.kk.aaaa. "))
+
+def kuu_nimi(kuup):
+    kuunimed = ["jaanuar", "veebruar", "märts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"]
+    return kuunimed[kuup-1]
+
+
+def kuupäev_sõnena(kp):
+    formaat = kp[0:2] + ". " + kuu_nimi(int(kp[3:5])) + " " + kp[6:10] + ". a"
+    return formaat
+
+print(str(kuupäev_sõnena(küsimus)))
