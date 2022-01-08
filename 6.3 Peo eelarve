@@ -1,0 +1,19 @@
+küsimus = int(input("Mitu inimest on kutsutud? " ))
+küsimus2 = int(input("Mitu inimest tuleb? "))
+#max_arve = float(input("Maksimaalne eelarve: "))
+#min_arve = float(input("Minimaalne eelarve: "))
+#söögi peale on iga osaleja kohta 10 eurot
+# ruumi rent on 55 eurot
+#täisarvud
+# x on inimene (kutsutud)
+# y on tulevad arv
+# kokku on arvutada osaleja arv * 10 + 55, kui tuleb vähem siis leida 1 ja lahutada
+def eelarve(sisend):
+    return sisend * 10 + 55
+
+#def minimum(maks):
+    #maks = küsimus2 * 10 + 55
+    #return maks
+
+print("Maksimaalne eelarve: " + str(round(eelarve(küsimus))) + " eurot")
+print("Minimaalne eelarve: " + str(round(eelarve(küsimus2))) + " eurot")
