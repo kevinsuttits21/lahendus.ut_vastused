@@ -1,0 +1,5 @@
+x= int(input("anna arv: "))
+x= int(x)
+y= int(input("anna arv: "))
+y= int(y)
+print(x**y)
