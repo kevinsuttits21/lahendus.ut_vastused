@@ -1,0 +1,13 @@
+küsimus = int(input("Sisestage külaliste arv: "))
+samm = 0
+kokku = 0
+i = 0
+def tervitus(samm):
+    print("Võõrustaja: ""Tere!")
+    print("Täna " + str(samm) + ". kord tervitada, mõtiskleb võõrustaja.")
+    print("Külaline: ""Tere, suur tänu kutse eest!")
+
+
+while i<küsimus:
+    i = i + 1
+    tervitus(i)
