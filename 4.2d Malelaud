@@ -1,0 +1,25 @@
+from tkinter import *
+
+raam = Tk()
+
+tahvel = Canvas(raam, width=500, height=500, bg="white")
+
+rida=1
+x0=0
+
+for y in range(0, 400, 50):
+    if rida%2 == 0:
+        x0 = 50
+    else:
+        x0=0
+
+    for x in range(x0, 400, 100):
+        tahvel.create_rectangle(x, y, x+50, y+50, fill="black")
+    rida+=1
+
+tahvel.create_rectangle(0, 0, 400, 400)
+tahvel.move(ALL, 500/2-400/2, 500/2-400/2)
+        
+
+tahvel.pack()
+raam.mainloop()
