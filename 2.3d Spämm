@@ -1,0 +1,21 @@
+kirja_suurus = float(input("Sisestage kirja suurus: "))
+kirja_teema = str(input("Sisestage kirja teema pealkiri: "))
+kirja_fail = str(input("Kas kirjaga on kaasas fail?: "))
+
+if kirja_suurus > 1 and kirja_fail == "jah":
+    print("Kiri on spämm")
+elif kirja_teema == "":
+    print("Kiri on spämm")
+elif kirja_suurus < 1 and kirja_fail == "ei":
+    print("Kiri ei ole spämm")
+else:
+    print("Kiri ei ole spämm")
+    
+    
+# spamm on, siis kui fail on i > 1 MB ja kirjal ei ole pealkirja
+# i = 0
+# üks neist peab olema tõene
+
+kirja_suurus = 0
+kirja_teema = 0
+kirja_fail = 0
