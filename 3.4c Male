@@ -1,0 +1,14 @@
+# Iga ruut edasi ehk + 1 on nisutera * 2
+küsimus = int(input("Sisestage täisarv: "))
+if küsimus > 64:
+    print("LIIGA PALJU")
+# ruute on kokku 64
+nisut = 0
+summa = 0
+ruut = 0
+while ruut < küsimus:
+    nisut = 2 ** ruut
+    #summa = nisut + summa
+    ruut += 1
+
+print(nisut)
