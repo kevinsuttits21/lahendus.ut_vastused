@@ -1,0 +1,21 @@
+from tkinter import *
+raam = Tk()
+raam.title("KAST")
+tahvel = Canvas(raam, width=700, height=400)
+tahvel.pack()
+
+
+#kollane = fff500
+
+def motion(event):
+    x, y = event.x, event.y
+    print('{}, {}'.format(x, y))
+
+raam.bind('<Motion>', motion)
+
+
+tahvel.create_rectangle(1,150,701,0, width=0, fill="#0093dd")
+tahvel.create_rectangle(1,256,701,150, width=0,fill="yellow")
+tahvel.create_rectangle(1,402,701,200, width=0,fill="#0093dd")
+
+raam.mainloop()
