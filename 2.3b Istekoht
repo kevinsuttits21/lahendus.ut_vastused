@@ -1,0 +1,14 @@
+from random import randint
+isevmitte = input('Kas soovite istekohta ise valida ("ise") või loosida ("loos")?:  ')
+suvaline_arv = randint(1,3)
+istekoht = 0
+if isevmitte == "loos" and (suvaline_arv == 1):
+    print("Istekoht loositi. Aknakoht")
+elif isevmitte == "loos" and (suvaline_arv == 2 or suvaline_arv == 3):
+    print("Istekoht loositi. Vahekäigukoht")
+elif isevmitte == "ise" :
+    istekoht = input("Kas soovite istuda akna ääres (aken) või mitte (muu)?: ")
+if istekoht == "muu":
+    print("Valisite ise. Vahekäigukoht")
+elif istekoht == "aken":
+    print("Valisite ise. Aknakoht")
