@@ -1,0 +1,23 @@
+# 2 metsaringi läbimisel saab jänesepoeg 2 porgandit, 4. metsaringi läbim
+# misel 4 porgandit juurde, 6. metsaringi läbimisel 6 porgandit juurde
+# PAARITUARVUDEL EI SAA JUURDE
+# ehk 2,4,6,8,10 lubatud
+# iga paarisarvuga metsaring läbitud, sama arv porgandit saab juurde
+# lisades ka eelnevaid
+
+
+
+küsimus = int(input("Sisesta ringide arv: "))
+if küsimus < 0:
+    print("Vale arv")
+    
+    
+summa = 0
+ring = 0
+while ring <= küsimus  :
+    if ring % 2 == 0:
+        summa = summa + ring
+    ring = ring + 1
+        
+print(summa)
+    
