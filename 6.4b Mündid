@@ -1,0 +1,28 @@
+#hoiupõrsasse läheb 1, 2 ja 5 sendised
+# 10 20 50 on kullakarva sendid
+# 1 euro on 100 senti
+
+küsimus = input("Sisesta failinimi: ")
+#if not ('mündid' + 'txt'):
+    #print("Vale fail või vale faili tüüp")
+rida =  []
+mündid = []
+fail = open(küsimus)
+for rida in fail:
+    mündid.append(int(rida))
+fail.close()
+i = 0
+summ = 0
+def pronksikarva_summa(summ):
+    kokku = 0
+    for element in summ:
+        if element < 6:
+            kokku += element  
+    return kokku
+        
+
+# summ = 1 + 2 + 2 + 1 + 5 = 11?????
+
+
+
+print(("Hoiupõrsasse läheb " + str(pronksikarva_summa(mündid))) + " senti")
