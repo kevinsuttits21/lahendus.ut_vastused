@@ -1,0 +1,5 @@
+#Iga nimi peab olema igas sõnas esitäht suur ja teised väikesed
+
+küsimus = str(input("Sisestage oma ees-ja perekonnanimi: "))
+
+print(küsimus.title())
