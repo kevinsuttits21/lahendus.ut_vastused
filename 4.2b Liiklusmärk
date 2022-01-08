@@ -1,0 +1,20 @@
+from tkinter import *
+#221
+raam = Tk()
+raam.title("Liiklusmärk")
+tahvel = Canvas(raam, width=700, height=400)
+tahvel.pack()
+
+
+
+
+def motion(event):
+    x, y = event.x, event.y
+    print('{}, {}'.format(x, y))
+
+raam.bind('<Motion>', motion)
+
+tahvel.create_polygon(345,133,200,360,433,360, width=19, outline="red", fill="white")
+
+
+raam.mainloop()
