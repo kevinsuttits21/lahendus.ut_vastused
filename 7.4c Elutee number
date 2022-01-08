@@ -1,0 +1,36 @@
+def elutee(s):
+    #abimuutaja numbri arvutamiseks
+    n = 0
+    # tsükkel, mis vaatab iga sümboli sõnes
+    for i in s:
+        if i != ".":
+            n += int(i) # arvutame summat
+    # kui saadud arv on väiksem kui 10, siis ongi elutee number käes
+    if n < 10:
+        return n
+    # kui saadud arv on 10 või suurem, siis on vaja uuesti arvutada,
+    #selleks kasutame jälle sama funktsiooni
+    else:
+        return elutee(str(n))
+
+
+k = 0
+while k <= 9:
+    f = open("eluteenumber" + str(k) + ".txt", "w+")
+    k = k + 1
+    
+s = open("sunnikuupaevad.txt")
+kuupäevad = []
+for kp in s:
+    kuupäevad.append(kp.strip())
+s.close()
+
+k = 0        
+for kp in kuupäevad:
+    f = open("eluteenumber" + str(elutee(kuupäevad[k])) + ".txt", "a")
+    f.write(kuupäevad[k] + "\n")
+    f.close()
+    k = k + 1
+
+
+
