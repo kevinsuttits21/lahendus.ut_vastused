@@ -1,0 +1,14 @@
+küsimus = int(input("Sisesta ringide arv: "))
+if küsimus < 0:
+    print("Vale arv")
+    
+     
+summa = 0
+eelmine = 0
+samm = 1
+while samm <= küsimus:
+    summa = summa + eelmine + samm
+    eelmine = eelmine + samm
+    samm = samm + 1
+    
+print(summa)
