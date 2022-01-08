@@ -1,0 +1,10 @@
+#50 kilo - 20 litrit mahla
+# õuntekogus on x
+x = float(input("Sisestage õunte kogus kilogrammides: "))
+
+def mahlapakkide_arv(mahl):
+    mahl = (x * 0.4 / 3)
+    return round(mahl)
+
+print(round(mahlapakkide_arv(x)))
+
