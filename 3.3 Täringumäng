@@ -1,0 +1,13 @@
+from random import randint
+
+küsimus = int(input("Täringute arv: "))
+
+
+taring = 0
+
+while taring <= küsimus :
+    if taring > 0:
+        suvaline = randint(1,6)
+        print(suvaline)
+    taring = taring + 1     
+     
