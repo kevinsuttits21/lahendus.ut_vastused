@@ -1,0 +1,21 @@
+from tkinter import *
+#221
+raam = Tk()
+raam.title("Liiklusmärk")
+tahvel = Canvas(raam, width=700, height=400)
+tahvel.pack()
+
+tahvel.create_rectangle(217,398,500,150, width=0, fill="gray")
+tahvel.create_rectangle(340,395,300,285, width=0, fill="brown")
+tahvel.create_rectangle(300,253,450,208, width=0, fill="white")
+tahvel.create_polygon(218,151,500,150,350,7, width=0, fill="yellow")
+
+
+def motion(event):
+    x, y = event.x, event.y
+    print('{}, {}'.format(x, y))
+
+raam.bind('<Motion>', motion)
+#1 ruut, 2 ristkülikut, 1 kolmnurk
+#TULEB MAJA
+raam.mainloop()
