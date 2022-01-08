@@ -1,0 +1,14 @@
+küsimus = int(input("Sisesta ringide arv: "))
+if küsimus < 0:
+    print("Vale arv")
+
+i = 0
+por = 0
+for i in range(0, küsimus+1, 2):
+    if i > 0 :
+        por = por + i
+        
+
+
+lause1 = ("Saadavate porgandite koguarv on " + str(por)) 
+print(lause1)
