@@ -1,0 +1,15 @@
+def asendus(lause):
+    lause = lause.upper()
+    lause = lause.replace("Ä", "AE")
+    lause = lause.replace("Õ", "OE")
+    lause = lause.replace("Ö", "OE")
+    lause = lause.replace("Ü", "UE")
+    return lause
+  
+küsimus = str((input("Sisestage failinimi: ")))
+
+fail = open(küsimus, encoding="UTF-8")
+for rida in fail:
+    print(asendus(rida.strip()))
+    
+fail.close()
