@@ -1,0 +1,23 @@
+inim_arv = int(input("Inimeste arv: "))
+koht_arv = int(input("Kohtade arv: "))
+
+
+buss = ("Busse vaja: ")
+viimane = ("Viimases bussis inimesi: ")
+# busse vaja on jagada inmesed // kohtadega
+# viimases bussis inimesi saame nii, et inimeste arv - kohtade arv
+# ehk viimane on ka jääk
+jääk = 0
+buss = 0
+jääk = ( inim_arv % koht_arv )
+buss = ( inim_arv // koht_arv )
+
+
+if jääk > 0:
+    buss += 1
+    viim = jääk
+else:
+    viim = koht_arv
+    
+print("Busse vaja:" + str(buss))
+print("Viimases bussis inimesi:" + str(viim))
