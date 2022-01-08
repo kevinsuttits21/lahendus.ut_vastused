@@ -1,0 +1,10 @@
+from datetime import datetime
+kuupäev = datetime.today()
+print("Kuupäev ja kellaeg: " + str(kuupäev))
+
+küsimus = str(input("Sisesta sissekande tekst: "))
+
+f = open("paevik.txt", 'a' , encoding = ( "UTF-8"), )
+f.write(str(kuupäev) + '\n')
+f.write(küsimus + '\n')
+f.close()
