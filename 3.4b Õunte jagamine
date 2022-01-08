@@ -1,0 +1,22 @@
+from random import randint
+poisse = int(input("Mitu pöialpoissi tahab õunu?: "))
+if poisse > 7:
+    print("Pole piisavalt pöialpoisse!")
+
+i = 1
+õunu_kokku_antud = 0
+while i <= poisse:
+    suvaline = randint(1,2)
+    print(suvaline)
+    õunu_kokku_antud += suvaline 
+    i += 1
+    
+x = (14-õunu_kokku_antud)
+print("Lumivalgekesele jäi " + str(x))
+        
+        
+        
+        
+        
+#ÜLEJÄÄK LAHUTAD 14 - SUVALINE
+        
