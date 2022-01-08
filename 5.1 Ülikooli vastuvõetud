@@ -1,0 +1,14 @@
+fail = open("rebased.txt", encoding="UTF-8")
+#aastad on 2011-2019 8 MAX
+vastuvõetud = []
+aasta = int(input("Palun sisestage, millise aasta andmeid vajate: "))
+for rida in fail:
+
+    vastuvõetud.append(int(rida))
+fail.close()
+a = 0
+a = aasta - 2011
+if a >= 0:
+       vastuv = vastuvõetud[a]       
+
+print (str(aasta) + ". aastal oli vastuvõetuid " + str(vastuv))
