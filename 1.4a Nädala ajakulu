@@ -1,0 +1,5 @@
+x= int(input("ainepunktide arv: "))
+y= int(input("nädalate arv: "))
+ajakulu = x * 26 / y
+ajakulu = round(ajakulu)
+print(ajakulu)
