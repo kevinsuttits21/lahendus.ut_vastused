@@ -1,0 +1,19 @@
+from time import sleep
+
+küsimus = (int(input("Mitu korda soovite reklaamlauseet kuvada? ")))
+küsimus2 = input("Sisestage reklaamlause: ")
+
+def banner(lause):
+    lause = lause.upper()
+    return lause
+
+küsimus2.upper()
+#print(küsimus2.upper())
+
+# iga kord 1 arv suurem kui küsimus 2 siis liidab juurde 1 tsüklis
+
+while küsimus > 0:
+      küsimus -= 1
+      print(banner(küsimus2.upper()))
+    
+
