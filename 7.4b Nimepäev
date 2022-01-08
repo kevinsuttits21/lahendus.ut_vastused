@@ -1,0 +1,54 @@
+from urllib.request import urlopen
+
+#url = https://kodu.ut.ee/~eno/mooc/
+# ei ole täpitähti
+# iga rida on 1 päev
+# ehk rida 1 on 01
+
+küsimus = str(input("Sisestage kuu: "))
+küsimus2 = int(input("Sisestage päev: "))
+
+
+
+if küsimus == "jaanuar":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/jaanuar")
+elif küsimus == "veebruar":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/veebruar")
+elif küsimus == "marts":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/marts")
+elif küsimus == "aprill":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/marts")
+elif küsimus == "mai":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/mai")
+elif küsimus == "juuni":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/juuni")
+elif küsimus == "juuli":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/juuli")
+elif küsimus == "august":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/august")
+elif küsimus == "september":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/september")
+elif küsimus == "oktoober":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/oktoober")
+elif küsimus == "november":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/november")
+elif küsimus == "detsember":
+    url = urlopen("https://kodu.ut.ee/~eno/mooc/detsember")
+
+urlbait = url.read()
+urlsõne = urlbait.decode()
+
+järjend = urlsõne.splitlines()
+
+
+
+#for rida in url:
+    
+
+lause = ("Kuupäeval " + str(küsimus2) + "." + " " + str(küsimus) + " on nimepäevad järgmiste nimedega inimestel: ")
+
+#järjend = ["jaanuar", "veebruar", "marts", "aprill", "mai", "juuni", "juuli", "august", "september", "oktoober", "november", "detsember"]
+
+print(lause)
+#print(järjend)
+print(järjend[küsimus2 - 1])
