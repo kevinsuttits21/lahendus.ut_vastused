@@ -1,0 +1,18 @@
+from datetime import *
+päev = datetime.now().day
+
+
+fail = str(input("Sisestage failinimi: "))
+jrk = 0
+opilased = []
+erlas = 0
+fail = open('nimekiri' + '.txt')
+for rida in fail:
+    opilased.append(str(rida))
+    jrk = jrk + 1
+fail.close()
+erlas = opilased[päev - jrk - 1]
+
+print("Vastama tuleb:" + str(erlas))
+
+#31 päeva kuus, iga päev on kirjas see numbrgia õpilane tuleb vastama
