@@ -1,0 +1,10 @@
+x = float(input("Palun sisesta punktisumma: "))
+if x>= 0 and x < 66:
+    print("Vähem kui kandideerimiseks vajalik")
+if x >= 66 and x < 85:
+    print("Kandideerimine vastuvõtule")
+if x >= 85 and x <= 100:
+    print("Vastuvõtt tagatud")
+if x < 0 or x > 100:
+    print("Vigane punktisumma")
+    
