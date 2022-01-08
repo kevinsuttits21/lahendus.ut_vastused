@@ -1,0 +1,45 @@
+#rändesaldo on sisse ja väljarännanute arvude vahe
+# sisseränne - väljaränne
+# kokku 10 aastat
+sisseränne = []
+väljaränne = []
+jrk = 0
+a = 0
+b = 0
+t = 0
+saldo = []
+saldo2 = []
+suurim = 0
+fail1 = open('sisseränne' + '.txt')
+for rida in fail1:
+    sisseränne.append(str(rida).strip())
+fail1.close()
+
+fail2 = open('väljaränne' + '.txt')
+for rida in fail2:
+    väljaränne.append(str(rida).strip())
+fail2.close()
+
+
+while jrk < len(sisseränne):
+    a = sisseränne[jrk].strip()
+    b = väljaränne[jrk].strip()
+    t = int(a) - int(b)
+    saldo.append(t)
+    jrk = jrk + 1
+    
+while jrk < len(väljaränne):
+    a = sisseränne[jrk].strip()
+    b = väljaränne[jrk].strip()
+    t = int(a) - int(b)
+    saldo2.append(t)
+    jrk = jrk + 1
+    
+print(saldo)    
+suurim = max(saldo)
+
+if 0 < suurim:
+    print("Suurim positiivne rändesaldo oli " + str(saldo.index(suurim)+1) + ". aastal")
+else:
+    print("Positiivse rändesaldoga aastaid ei ole.")
+
