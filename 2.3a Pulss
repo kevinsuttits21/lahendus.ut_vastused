@@ -1,0 +1,23 @@
+vanus = int(input("Sisestage enda vanus: "))
+sugu = input("Sisestage enda sugu: ")
+TT = int(input("Sisestage treeningu tüüp: "))
+       
+if sugu == "m" or sugu == "M":
+    makspulss = 220 - vanus
+elif sugu == "n" or sugu == "N":
+    makspulss = 206 - (0.88 * vanus)
+    
+if TT == 1:
+    alumine = 0.5 * makspulss
+    ylemine = 0.7 * makspulss
+elif TT == 2:
+    alumine = 0.7 * makspulss
+    ylemine = 0.8 * makspulss   
+elif TT == 3:
+    alumine = 0.8 * makspulss
+    ylemine = 0.87 * makspulss
+
+
+tyyp = "Pulsisagedus peaks olema vahemikus " + str(round(alumine)) + " kuni " + str(round(ylemine)) + "."
+print(tyyp)
+    
