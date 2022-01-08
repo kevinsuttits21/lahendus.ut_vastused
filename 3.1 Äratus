@@ -1,0 +1,8 @@
+äratus = int(input("Sisestage mitu korda äratada: "))
+
+lause1 = ("Tõuse ja sära!")
+
+
+while äratus > 0:
+      äratus -= 1
+      print(lause1)
