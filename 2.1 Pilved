@@ -1,0 +1,11 @@
+x= float(input("Palun sisesta pilvede kõrgus: "))
+
+
+if x > 6:
+    print("Need on ülemised pilved")
+    print("")
+    
+if x <= 6:
+        print("Need ei ole ülemised pilved")
+        print("")
+    
